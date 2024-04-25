@@ -1,0 +1,16 @@
+﻿<Window x:Class="Crimsonyte.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Crimsonyte"
+        mc:Ignorable="d"
+        Title="Crimsonyte - Menu" MinHeight="550" MinWidth="900" Height="650" Width="1000">
+    <Grid Background="#313338">
+        <Label Content="Crimsonyte" FontSize="70" Foreground="Crimson" Margin="30" HorizontalAlignment="Center"/>
+        <TextBox x:Name="textbox" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black" Foreground="Crimson" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                Width="200" Height="40" Margin="300,197,300,197"/>
+        <Button x:Name="btn_Name" Click="btn_Name_Click" Content="Start Game" FontSize="25" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black" Foreground="Crimson"
+                Width="150" Height="80" Margin="325,271,325,63"/>
+    </Grid>
+</Window>

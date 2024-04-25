@@ -1,0 +1,23 @@
+﻿<Window x:Class="Crimsonyte.Battle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Crimsonyte"
+        mc:Ignorable="d"
+        Title="Crimsonyte - Battle" MinHeight="550" MinWidth="900" Height="650" Width="1000">
+    <Grid Background="#313338">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="49*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="0" Grid.Row="1" Source="pics/tbFem.png" Stretch="Uniform"/>
+    </Grid>
+</Window>
