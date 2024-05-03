@@ -18,6 +18,16 @@
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Column="0" Grid.Row="1" Source="pics/tbFem.png" Stretch="Uniform"/>
+        <!--Player-->
+        <Label Grid.Column="0" Grid.Row="0" x:Name="labelPlayerName" FontSize="30" Foreground="White" HorizontalContentAlignment="Center"/>
+        <Image Grid.Column="0" Grid.Row="1" Source="pics/stelle.png" Stretch="UniformToFill"/>
+        <ProgressBar Grid.Column="0" Grid.Row="2" x:Name="barPlayerHP" Background="DarkRed" BorderBrush="Black" Width="auto" Height="40" VerticalAlignment="Top" Margin="10"/>
+        <Image Grid.Column="0" Grid.Row="2" Source="pics/melee.png" HorizontalAlignment="Left" Width="100" Height="100" Margin="45,64,0,9"/>
+        <Image Grid.Row="2" Source="pics/parry.png" HorizontalAlignment="Center" Width="100" Height="100" Margin="0,63,0,10"/>
+        <Image Grid.Column="0" Grid.Row="2" Source="pics/heal.png" HorizontalAlignment="Right" Width="100" Height="100" Margin="0,63,42,10"/>
+
+
+        <!--Enemy-->
+
     </Grid>
 </Window>

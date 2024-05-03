@@ -5,14 +5,28 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="pics\tbFem.png" />
+    <None Remove="pics\heal.png" />
+    <None Remove="pics\melee.png" />
+    <None Remove="pics\parry.png" />
+    <None Remove="pics\stelle.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="pics\tbFem.png">
+    <Content Include="logo.ico" />
+    <Content Include="pics\heal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\melee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\parry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\stelle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

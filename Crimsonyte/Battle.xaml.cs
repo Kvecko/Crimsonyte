@@ -22,6 +22,7 @@ namespace Crimsonyte
         public Battle()
         {
             InitializeComponent();
+            labelPlayerName.Content = Stats.playerName;
         }
     }
 }

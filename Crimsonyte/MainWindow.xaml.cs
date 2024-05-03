@@ -20,22 +20,20 @@ namespace Crimsonyte
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string playerName;
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void btn_Name_Click(object sender, RoutedEventArgs e)
         {
             if (textbox.Text != "")
             {
-                playerName = textbox.Text.ToString();
+                Stats.playerName = textbox.Text.ToString();
             }
             else
             {
-                playerName = "Trailblazer";
+                Stats.playerName = "Trailblazer";
             }
             Window windowBattle = new Battle();
             windowBattle.Show();
