@@ -22,12 +22,24 @@
         <Label Grid.Column="0" Grid.Row="0" x:Name="labelPlayerName" FontSize="30" Foreground="White" HorizontalContentAlignment="Center"/>
         <Image Grid.Column="0" Grid.Row="1" Source="pics/stelle.png" Stretch="UniformToFill"/>
         <ProgressBar Grid.Column="0" Grid.Row="2" x:Name="barPlayerHP" Background="DarkRed" BorderBrush="Black" Width="auto" Height="40" VerticalAlignment="Top" Margin="10"/>
-        <Image Grid.Column="0" Grid.Row="2" Source="pics/melee.png" HorizontalAlignment="Left" Width="100" Height="100" Margin="45,64,0,9"/>
-        <Image Grid.Row="2" Source="pics/parry.png" HorizontalAlignment="Center" Width="100" Height="100" Margin="0,63,0,10"/>
-        <Image Grid.Column="0" Grid.Row="2" Source="pics/heal.png" HorizontalAlignment="Right" Width="100" Height="100" Margin="0,63,42,10"/>
-
+        <Button x:Name="btnAttack" Click="btnAttack_Click" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Width="100" Height="100" Margin="45,64,0,9" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black">
+            <Image Source="pics/melee.png"/>
+        </Button>
+        <Button x:Name="btnParry" Click="btnParry_Click" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Width="100" Height="100" Margin="0,63,0,10" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black">
+            <Image Source="pics/parry.png"/>
+        </Button>
+        <Button x:Name="btnHeal" Click="btnHeal_Click" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Width="100" Height="100" Margin="0,63,42,10" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black">
+            <Image Source="pics/heal.png"/>
+        </Button>
 
         <!--Enemy-->
+        <Label Grid.Column="2" Grid.Row="0" x:Name="labelEnemyName" FontSize="30" Foreground="White" HorizontalContentAlignment="Center"/>
+        <Image Grid.Column="2" Grid.Row="1" x:Name="enemyPic1" Source="pics/lynette.png" Stretch="UniformToFill" Visibility="Visible"/>
+        <Image Grid.Column="2" Grid.Row="1" x:Name="enemyPic2" Source="pics/lyney.png" Stretch="UniformToFill" Visibility="Hidden"/>
+        <Image Grid.Column="2" Grid.Row="1" x:Name="enemyPic3" Source="pics/arle.png" Stretch="UniformToFill" Visibility="Hidden"/>
+        <ProgressBar Grid.Column="2" Grid.Row="2" x:Name="barEnemyHP" Background="DarkRed" BorderBrush="Black" Width="auto" Height="40" VerticalAlignment="Top" Margin="10"/>
+        <Button x:Name="btnNext" Click="btnNext_Click" Grid.Column="2" Grid.Row="2" Content="Next Round" FontSize="50" VerticalAlignment="Bottom" Height="100" Margin="10" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black" Foreground="Crimson"/>
 
+        <Label Grid.Column="2" Grid.Row="0" x:Name="labelWave" Foreground="White" FontSize="25" VerticalContentAlignment="Top" HorizontalContentAlignment="Right"/>
     </Grid>
 </Window>
