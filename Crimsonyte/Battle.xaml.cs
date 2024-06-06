@@ -52,6 +52,7 @@ namespace Crimsonyte
             {
                 MessageBox.Show("Already used move");
             }
+            btnNext_Click(sender, e);
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
@@ -131,6 +132,7 @@ namespace Crimsonyte
             {
                 MessageBox.Show("Already used move");
             }
+            btnNext_Click(sender, e);
         }
 
         private void btnHeal_Click(object sender, RoutedEventArgs e)
@@ -148,6 +150,7 @@ namespace Crimsonyte
             {
                 MessageBox.Show("Already used move");
             }
+            btnNext_Click(sender, e);
         }
     }
 }
