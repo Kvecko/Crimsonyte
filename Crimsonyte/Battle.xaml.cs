@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Runtime.InteropServices.Marshalling.IIUnknownCacheStrategy;
 
 namespace Crimsonyte
 {
@@ -24,17 +25,19 @@ namespace Crimsonyte
         {
             InitializeComponent();
             labelPlayerName.Content = Stats.playerName;
+            Stats.playerHP = 150;
             barPlayerHP.Maximum = Stats.playerHP;
             barPlayerHP.Value = Stats.playerHP;
 
-            labelEnemyName.Content = "Lynette";
+            labelEnemyName.Content = "Guardian of the Entrance";
             Stats.enemyHP = 100;
             Stats.enemyDMGMin = 5;
             Stats.enemyDMGMax = 10;
             barEnemyHP.Maximum = Stats.enemyHP;
             barEnemyHP.Value = Stats.enemyHP;
 
-            labelWave.Content = Stats.wave + ".";
+            Stats.room = 1;
+            labelRoom.Content = $"Room: {Stats.room}";
         }
 
         private void btnAttack_Click(object sender, RoutedEventArgs e)
@@ -44,13 +47,9 @@ namespace Crimsonyte
                 Stats.usedAttack = true;
 
                 Stats.value = Stats.rng.Next(25, 31);
-                MessageBox.Show($"You dealt {Stats.value} damage");
+                labelInfo.Content = $"You dealt {Stats.value} damage";
                 Stats.enemyHP -= Stats.value;
                 barEnemyHP.Value = Stats.enemyHP;
-            }
-            else
-            {
-                MessageBox.Show("Already used move");
             }
             btnNext_Click(sender, e);
         }
@@ -60,9 +59,9 @@ namespace Crimsonyte
             Stats.usedAttack = false;
             if (barEnemyHP.Value <= 0)
             {
-                Stats.wave++;
-                labelWave.Content = Stats.wave + ".";
-                switch (Stats.wave)
+                Stats.room++;
+                labelRoom.Content = $"Room: {Stats.room}";
+                switch (Stats.room)
                 {
                     case 2:
                         labelEnemyName.Content = "Lyney";
@@ -99,9 +98,9 @@ namespace Crimsonyte
                 if(Stats.playerHP <= 0)
                 {
                     MessageBox.Show("YOU DIED");
-                    //Vyměnit MessageBox za Loss screen
-                    MessageBox.Show("The project is now going to self-destruct!");
-                    Close();
+                    Window windowMenu = new MainWindow();
+                    windowMenu.Show();
+                    this.Close();
                 }
             }
         }
@@ -116,21 +115,17 @@ namespace Crimsonyte
                 if(Stats.value <= 60)
                 {
                     Stats.value = Stats.rng.Next(Stats.enemyDMGMin, Stats.enemyDMGMax + 1);
-                    MessageBox.Show($"You failed the parry and took {Stats.value} damage");
+                    labelInfo.Content = $"You failed the parry and took {Stats.value} damage";
                     Stats.playerHP -= Stats.value;
                     barPlayerHP.Value = Stats.playerHP;
                 }
                 else
                 {
                     Stats.value = Stats.rng.Next(40, 51);
-                    MessageBox.Show($"You succesfully paried and dealt {Stats.value} damage");
+                    labelInfo.Content = $"You succesfully paried and dealt {Stats.value} damage";
                     Stats.enemyHP -= Stats.value;
                     barEnemyHP.Value = Stats.enemyHP;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Already used move");
             }
             btnNext_Click(sender, e);
         }
@@ -142,13 +137,9 @@ namespace Crimsonyte
                 Stats.usedAttack = true;
 
                 Stats.value = Stats.rng.Next(30, 51);
-                MessageBox.Show($"You healed for {Stats.value} HP");
+                labelInfo.Content = $"You healed for {Stats.value} HP";
                 Stats.playerHP += Stats.value;
                 barPlayerHP.Value = Stats.playerHP;
-            }
-            else
-            {
-                MessageBox.Show("Already used move");
             }
             btnNext_Click(sender, e);
         }
