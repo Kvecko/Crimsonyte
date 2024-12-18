@@ -1,4 +1,4 @@
-Projekt na zadání "Bossfigher"
+Bomby projekt
 
 ♥CZ♥:
 Hra obsahuje - *INTENZIVNÍ GAMEPLAY*, žádný konec a mnoho dalšího
