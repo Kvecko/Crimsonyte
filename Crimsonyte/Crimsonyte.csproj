@@ -9,27 +9,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="pics\arle.png" />
+    <None Remove="pics\bandit.png" />
+    <None Remove="pics\boss.png" />
+    <None Remove="pics\goblin.png" />
+    <None Remove="pics\guardian.png" />
     <None Remove="pics\heal.png" />
-    <None Remove="pics\lynette.png" />
-    <None Remove="pics\lyney.png" />
     <None Remove="pics\melee.png" />
     <None Remove="pics\parry.png" />
-    <None Remove="pics\stelle.png" />
+    <None Remove="pics\player.png" />
+    <None Remove="pics\skeleton.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="logo.ico" />
-    <Content Include="pics\arle.png">
+    <Content Include="pics\bandit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\boss.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\goblin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\guardian.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="pics\heal.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="pics\lynette.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="pics\lyney.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="pics\melee.png">
@@ -38,7 +43,10 @@
     <Content Include="pics\parry.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pics\stelle.png">
+    <Content Include="pics\player.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\skeleton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
