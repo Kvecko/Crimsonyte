@@ -33,7 +33,7 @@ namespace Crimsonyte
             }
             else
             {
-                Stats.playerName = "Trailblazer";
+                Stats.playerName = "Chosen One";
             }
             Window windowBattle = new Battle();
             windowBattle.Show();

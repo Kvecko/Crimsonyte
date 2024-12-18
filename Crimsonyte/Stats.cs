@@ -13,12 +13,15 @@ namespace Crimsonyte
         //Game values
         public static Random rng = new Random();
         public static int value;
-        public static int wave = 1;
+        public static int room;
 
         //Player things
         public static string playerName { get; set; }
-        public static int playerHP = 150;
+        public static int playerHP;
         public static bool usedAttack = false;
+        public static int money = 0;
+        public static int attackLevel = 0;
+        public static int healLevel = 0;
 
         //Enemy things
         public static int enemyHP;

@@ -5,27 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Crimsonyte"
         mc:Ignorable="d"
-        Title="Crimsonyte - Battle" MinHeight="550" MinWidth="900" Height="650" Width="1000">
+        Title="Crimsonyte - Battle" MinHeight="650" MinWidth="1100" Height="650" Width="1100">
     <Grid Background="#313338">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="49*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="7*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
         <!--Player-->
-        <Label Grid.Column="0" Grid.Row="0" x:Name="labelPlayerName" FontSize="30" Foreground="White" HorizontalContentAlignment="Center"/>
-        <Image Grid.Column="0" Grid.Row="1" Source="pics/stelle.png" Stretch="UniformToFill"/>
-        <ProgressBar Grid.Column="0" Grid.Row="2" x:Name="barPlayerHP" Background="DarkRed" BorderBrush="Black" Width="auto" Height="40" VerticalAlignment="Top" Margin="10"/>
+        <Label Grid.Column="0" Grid.Row="0" x:Name="labelPlayerName" FontSize="30" Foreground="White" HorizontalContentAlignment="Center" Margin="0,0,0,403" Grid.RowSpan="2"/>
+        <Image Grid.Column="0" Grid.Row="1" Source="pics/player.png" Stretch="UniformToFill"/>
+        <ProgressBar Grid.Column="0" Grid.Row="2" x:Name="barPlayerHP" Background="DarkRed" BorderBrush="Black" Width="auto" Height="40" VerticalAlignment="Top" Margin="10,10,10,0"/>
         <Button x:Name="btnAttack" Click="btnAttack_Click" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Width="100" Height="100" Margin="45,64,0,9" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black">
             <Image Source="pics/melee.png"/>
         </Button>
-        <Button x:Name="btnParry" Click="btnParry_Click" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Width="100" Height="100" Margin="0,63,0,10" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black">
+        <Button x:Name="btnParry" Click="btnParry_Click" Grid.Row="2" HorizontalAlignment="Center" Width="100" Height="100" Margin="0,63,0,10" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black">
             <Image Source="pics/parry.png"/>
         </Button>
         <Button x:Name="btnHeal" Click="btnHeal_Click" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Width="100" Height="100" Margin="0,63,42,10" Background="#4d4a49" BorderThickness="2px" BorderBrush="Black">
@@ -33,12 +34,15 @@
         </Button>
 
         <!--Enemy-->
-        <Label Grid.Column="2" Grid.Row="0" x:Name="labelEnemyName" FontSize="30" Foreground="White" HorizontalContentAlignment="Center"/>
-        <Image Grid.Column="2" Grid.Row="1" x:Name="enemyPic1" Source="pics/lynette.png" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image Grid.Column="2" Grid.Row="1" x:Name="enemyPic2" Source="pics/lyney.png" Stretch="UniformToFill" Visibility="Hidden"/>
-        <Image Grid.Column="2" Grid.Row="1" x:Name="enemyPic3" Source="pics/arle.png" Stretch="UniformToFill" Visibility="Hidden"/>
-        <ProgressBar Grid.Column="2" Grid.Row="2" x:Name="barEnemyHP" Background="DarkRed" BorderBrush="Black" Width="auto" Height="40" VerticalAlignment="Top" Margin="10"/>
+        <Label Grid.Column="2" Grid.Row="0" x:Name="labelEnemyName" FontSize="30" Foreground="White" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,0,403" Grid.RowSpan="2"/>
+        <Image Grid.Column="2" Grid.Row="1" x:Name="enemyPic" Stretch="UniformToFill" Grid.ColumnSpan="2"/>
+        <ProgressBar Grid.Column="2" Grid.Row="2" x:Name="barEnemyHP" Background="DarkRed" BorderBrush="Black" Width="auto" Height="40" VerticalAlignment="Top" Margin="10,10,10,0" Grid.ColumnSpan="2"/>
 
-        <Label Grid.Column="2" Grid.Row="0" x:Name="labelWave" Foreground="White" FontSize="25" VerticalContentAlignment="Top" HorizontalContentAlignment="Right"/>
+        <Label Grid.Column="0" Grid.Row="0" x:Name="labelMoney" Foreground="White" FontSize="25" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Grid.ColumnSpan="2" Margin="10,0" Grid.RowSpan="2"/>
+        <Label Grid.Column="2" Grid.Row="0" x:Name="labelRoom" Foreground="White" FontSize="25" VerticalContentAlignment="Top" HorizontalContentAlignment="Right" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2"/>
+        <Label Grid.Column="2" Grid.Row="2" x:Name="labelInfo" Foreground="White" FontSize="25" VerticalContentAlignment="Top" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="80" Margin="10,10"/>
+        <Label Grid.Column="2" Grid.Row="2" Content="Costs 10" Foreground="White" FontSize="25" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150" Height="80" Margin="10,10"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="Upgrade Attack" x:Name="UpgradeAttack" Click="UpgradeAttack_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White" FontSize="25" Margin="10,10"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="Upgrade Heal" x:Name="UpgradeHeal" Click="UpgradeHeal_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Foreground="White" FontSize="25" Margin="10,10"/>
     </Grid>
 </Window>
